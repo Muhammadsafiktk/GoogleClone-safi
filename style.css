@@ -1,0 +1,297 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden; /* scroll bar khatam */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.boss {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #202124;
+}
+
+.boss ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    align-items: center;
+}
+
+.boss ul li {
+    list-style-type: none;
+}
+
+.boss ul li a {
+    text-decoration: none;
+    color: #202124;
+    font-size: 14px;
+}
+
+.boss ul li a:hover {
+    text-decoration: underline;
+}
+
+#q {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: #1a73e8;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#q:hover {
+    background-color: #1765cc;
+}
+
+/* Main content */
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    flex: 1;
+    padding: 10px 20px;
+    min-height: 0;
+}
+
+.image1 {
+    display: flex;
+    justify-content: center;
+}
+
+.image1 > img {
+    width: 272px;
+    max-width: 80vw;
+    height: auto;
+}
+
+.part2 {
+    width: 100%;
+    max-width: 584px;
+    display: flex;
+    justify-content: center;
+}
+
+.part2 input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.08);
+}
+
+.part2 input:hover,
+.part2 input:focus {
+    box-shadow: 0 1px 8px rgba(32, 33, 36, 0.2);
+    border-color: transparent;
+}
+
+.part3 {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.part3 button {
+    padding: 10px 16px;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    color: #3c4043;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.part3 button:hover {
+    border: 1px solid #dadce0;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.part4 {
+    font-size: 13px;
+    color: #3c4043;
+}
+
+.part4 a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+.part4 a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.child {
+    flex-shrink: 0;
+}
+
+.location p {
+    background-color: #f2f2f2;
+    padding: 12px 25px;
+    font-size: 15px;
+    color: #70757a;
+    border-bottom: 1px solid #dadce0;
+}
+
+.footerlinks {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 12px 25px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.leftlinks ul,
+.rightlinks ul {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.leftlinks ul li,
+.rightlinks ul li {
+    list-style-type: none;
+}
+
+.leftlinks ul li a,
+.rightlinks ul li a {
+    text-decoration: none;
+    color: #70757a;
+    font-size: 14px;
+}
+
+.leftlinks ul li a:hover,
+.rightlinks ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .boss {
+        padding: 10px 12px;
+    }
+
+    .logo-text {
+        font-size: 14px;
+    }
+
+    .boss ul {
+        gap: 10px;
+    }
+
+    .boss ul li a {
+        font-size: 13px;
+    }
+
+    #q {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .image1 > img {
+        width: 200px;
+    }
+
+    .part2 input {
+        padding: 11px 16px;
+        font-size: 15px;
+    }
+
+    .part3 button {
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+
+    .footerlinks {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 16px;
+        gap: 12px;
+    }
+
+    .leftlinks ul,
+    .rightlinks ul {
+        gap: 14px;
+    }
+
+    .location p {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .boss {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .logo-text {
+        font-size: 13px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .boss ul {
+        width: 100%;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    .image1 > img {
+        width: 160px;
+    }
+
+    .part3 {
+        gap: 8px;
+    }
+
+    .part3 button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .part4 {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .leftlinks ul,
+    .rightlinks ul {
+        gap: 12px;
+    }
+
+    .leftlinks ul li a,
+    .rightlinks ul li a {
+        font-size: 13px;
+    }
+}
